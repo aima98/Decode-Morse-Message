@@ -50,3 +50,8 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  AllowedMethods:
+    - some_method_name

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 MORSE_CODE = {
   '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E',
   '..-.' => 'F', '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J',
@@ -19,4 +21,8 @@ def decode_word(string)
   string.split.map { |char| decode_char(char) }.join
 end
 
-p decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...') # => "HELLO"
+def decode_msg(message)
+  message.split('   ').map { |word| decode_word(word) }.join(' ')
+end
+
+puts decode_msg('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')

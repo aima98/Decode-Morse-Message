@@ -21,4 +21,9 @@ def decode_word(string)
   string.split.map { |char| decode_char(char) }.join
 end
 
-p decode_word('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...') # => "HELLO"
+def decode(message)
+  words = message.split('   ')
+  decoded_words = words.map { |word| decode_word(word) }.join(' ')
+end
+
+p decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...') # => "HELLO"

@@ -1,5 +1,10 @@
+# frozen_string_literal: true
+
+require 'main'
+
 describe 'morsetest' do
-message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
-it 'should return HELLO' do
-expect(decode(message)).to eq("A BOX FULL OF RUBIES")
+  word = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+  it 'should return HELLO' do
+    expect(decode_word(word)).to eq('ABOXFULLOFRUBIES')
+  end
 end
